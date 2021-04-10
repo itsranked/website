@@ -1,0 +1,30 @@
+#statusbar {
+    height: 32px;
+    display: flex;
+    background-color: #121212;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #d3d3d3;
+    font-family: 'Roboto';
+}
+
+#statusbar .last-sync-time {
+    font-weight: 500;
+    font-size: 12px;
+    margin-left: 16px;
+}
+
+#links {
+  font-size: 14px;
+}
+
+#about-us {
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+#contact-us {
+  cursor: pointer;
+  margin-right: 16px;
+}
