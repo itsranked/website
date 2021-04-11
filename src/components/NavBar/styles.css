@@ -1,3 +1,11 @@
+@media (min-width: 1025px) {
+  #navbar {
+    margin: auto;
+    max-width: 1320px;
+  }
+}
+
+
 #navbar {
     height: 32px;
     display: flex;

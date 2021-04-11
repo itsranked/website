@@ -1,0 +1,59 @@
+@media (min-width: 768px) {
+  #language .language {
+    display: block !important;
+  }
+}
+
+
+#language {
+  color: #D3D3D3;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+#language .language {
+  font-family: 'Roboto';
+  font-size: 12px;
+  margin-right: 8px;
+  display: flex;
+  margin-top: 5px;
+  display: none;
+}
+
+#language .caret {
+  margin-left: 4px;
+  color: #D3D3D3;
+}
+
+#language .popover {
+  position: absolute;
+  background-color: #232323;
+  font-size: 28px;
+  width: 120px;
+  top: 24px;
+  left: -90px;
+}
+
+#language .popover li {
+  border-bottom: 1px solid #333;
+  padding: 8px;
+}
+
+#language .popover li a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#language .popover .language-name {
+  font-size: 12px;
+  color: #d3d3d3;
+  font-family: 'Roboto';
+  font-weight: 500;
+}

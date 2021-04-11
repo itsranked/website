@@ -1,7 +1,7 @@
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import ReactCountryFlag from 'react-country-flag';
+import LanguageSelector from '../LanguageSelector/component';
 import './styles.css';
 
 function Header() {
@@ -9,19 +9,17 @@ function Header() {
 
     return (
         <div id="header">
-            <div id="provider">
-                <span className="provider">{selectedProvider}</span>
-                <span className="caret">
-                    <FontAwesomeIcon icon={faCaretDown} />
-                </span>
-            </div>
-            <div id="language">
-                <span className="flag">
-                    <ReactCountryFlag countryCode="US" svg />
-                </span>
-                <span className="caret">
-                    <FontAwesomeIcon icon={faCaretDown} />
-                </span>
+            <div id="header-container">
+                <div id="logo">
+                  itsranked.net
+                </div>
+                <div id="provider">
+                    <span className="provider">{selectedProvider}</span>
+                    <span className="caret">
+                        <FontAwesomeIcon icon={faCaretDown} />
+                    </span>
+                </div>
+                <LanguageSelector />
             </div>
         </div>
     );

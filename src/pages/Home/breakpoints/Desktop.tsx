@@ -8,10 +8,10 @@ import ServerFlag from 'src/components/ServerFlag/component';
 import StatusBar from 'src/components/StatusBar/component';
 import useInternationalization from 'src/hooks/useInternationalization';
 import useScores from 'src/hooks/useScores';
+import './desktop.css';
 import './index.css';
-import './mobile.css';
 
-function HomePageMobile() {
+function HomePageDesktop() {
     const scores = useScores();
     const { _ } = useInternationalization();
 
@@ -19,9 +19,21 @@ function HomePageMobile() {
         <div id="container">
             <Header />
             <NavBar />
-            <StatusBar />
 
             <div id="content">
+                <div className="ad left-side">
+                    <div>
+                        {[...new Array(12)].map((_, index) => (
+                            <div key={index} className="banner"></div>
+                        ))}
+                    </div>
+
+                    <div>
+                        {[...new Array(12)].map((_, index) => (
+                            <div key={index} className="banner"></div>
+                        ))}
+                    </div>
+                </div>
                 <ul>
                     {scores.map((score) => (
                         <li key={score.position}>
@@ -54,9 +66,25 @@ function HomePageMobile() {
                         </li>
                     ))}
                 </ul>
+
+                <div className="ad right-side">
+                    <div>
+                        {[...new Array(12)].map((_, index) => (
+                            <div key={index} className="banner"></div>
+                        ))}
+                    </div>
+
+                    <div>
+                        {[...new Array(12)].map((_, index) => (
+                            <div key={index} className="banner"></div>
+                        ))}
+                    </div>
+                </div>
             </div>
+
+            <StatusBar />
         </div>
     );
 }
 
-export default React.memo(HomePageMobile);
+export default React.memo(HomePageDesktop);

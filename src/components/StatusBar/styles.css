@@ -1,3 +1,10 @@
+@media (min-width: 1025px) {
+    #statusbar {
+        margin: auto;
+        max-width: 1320px;
+    }
+}
+
 #statusbar {
     height: 32px;
     display: flex;
@@ -16,15 +23,25 @@
 }
 
 #links {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 #about-us {
-  cursor: pointer;
-  margin-right: 8px;
+    cursor: pointer;
+    margin-right: 4px;
+    display: none;
+}
+
+#links .separator {
+    margin-right: 4px;
+    display: none;
 }
 
 #contact-us {
-  cursor: pointer;
-  margin-right: 16px;
+    margin-right: 16px;
+}
+
+#contact-us a {
+    color: #d3d3d3;
+    text-decoration: none;
 }

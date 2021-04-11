@@ -9,9 +9,9 @@ import StatusBar from 'src/components/StatusBar/component';
 import useInternationalization from 'src/hooks/useInternationalization';
 import useScores from 'src/hooks/useScores';
 import './index.css';
-import './mobile.css';
+import './tablet.css';
 
-function HomePageMobile() {
+function HomePageTablet() {
     const scores = useScores();
     const { _ } = useInternationalization();
 
@@ -22,6 +22,11 @@ function HomePageMobile() {
             <StatusBar />
 
             <div id="content">
+                <div className="ad left-side">
+                    {[...new Array(12)].map(() => (
+                        <div className="banner"></div>
+                    ))}
+                </div>
                 <ul>
                     {scores.map((score) => (
                         <li key={score.position}>
@@ -54,9 +59,15 @@ function HomePageMobile() {
                         </li>
                     ))}
                 </ul>
+
+                <div className="ad right-side">
+                    {[...new Array(12)].map(() => (
+                        <div className="banner"></div>
+                    ))}
+                </div>
             </div>
         </div>
     );
 }
 
-export default React.memo(HomePageMobile);
+export default React.memo(HomePageTablet);
