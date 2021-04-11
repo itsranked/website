@@ -1,0 +1,27 @@
+{
+    "navbar.period.selected-period.top100of": "Top 100 of",
+    "navbar.period.region.img.alt.global-region": "Global Region",
+    "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ],
+    "content.info.score": "Score",
+    "content.info.day-format": "MMM Do",
+    "content.info.time-format": "hh:mm",
+    "statusbar.links.about-us": "About",
+    "statusbar.links.contact-us": "Contact",
+    "statusbar.last-sync-time.last-sync": "Last sync",
+    "statusbar.last-sync-time.ago": "ago",
+    "loading": "Loading",
+    "header.provider.language": "Language"
+}

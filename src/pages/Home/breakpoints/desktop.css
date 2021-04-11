@@ -1,0 +1,138 @@
+@media (min-width: 1025px) {
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    outline: 1px solid slategrey;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.3);
+  }
+
+  #content {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 32px - 56px - 32px);
+    overflow-y: auto;
+    max-width: 1320px;
+
+  }
+
+  #content ul {
+    flex: 1;
+  }
+
+  #content ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #232323;
+    margin-top: 1px;
+    color: #d3d3d3;
+    font-family: 'Roboto';
+    font-size: 13px;
+    padding: 16px;
+  }
+
+  #content ul li:nth-child(even) {
+    background-color: #252525;
+  }
+
+  #content ul li .position {
+    margin-right: 16px;
+  }
+
+  #content ul li .medal {
+    font-size: 32px;
+    display:flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  #content ul li .medal.position-1 {
+    color: gold;
+  }
+
+  #content ul li .medal.position-2 {
+    color: silver;
+  }
+
+  #content ul li .medal.position-3 {
+    color: orangered;
+  }
+
+  #content ul li .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content ul li .info > span {
+    margin-top: 8px;
+  }
+
+  #content ul li .info.first-column {
+    flex: 1;
+  }
+
+  #content ul li .info .address {
+    margin-right: 4px;
+  }
+
+  #content ul li .username {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+  }
+
+  #content ul li .info.second-column {
+    justify-self: flex-end;
+    text-align: center;
+    width: 50px;
+  }
+
+  #content ul li .info.third-column {
+    justify-self: flex-end;
+    text-align: right;
+    width: 50px;
+  }
+
+  .ad {
+    width: 352px;
+  }
+
+  .ad > div {
+    width: 160px;
+    float: left;
+  }
+
+  .ad.left-side > div {
+    margin-right: 16px;
+  }
+
+  .ad.right-side > div {
+    margin-left: 16px;
+  }
+
+  .ad .banner {
+    margin: auto;
+    background-color: #d3d3d3;
+    width: 160px;
+    height: 600px;
+    margin-top: 20px;
+  }
+
+}

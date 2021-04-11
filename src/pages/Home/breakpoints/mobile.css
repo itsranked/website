@@ -1,0 +1,97 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  #container {
+    margin: auto;
+    min-width: 320px;
+  }
+
+  #content {
+    height: calc(100vh - 32px - 56px - 32px);
+    overflow-y: scroll;
+  }
+
+  #content ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #232323;
+    margin-top: 1px;
+    color: #d3d3d3;
+    font-family: 'Roboto';
+    font-size: 13px;
+    padding: 16px;
+  }
+
+  #content ul li:nth-child(even) {
+    background-color: #252525;
+  }
+
+  #content ul li .position {
+    margin-right: 16px;
+  }
+
+  #content ul li .medal {
+    font-size: 32px;
+    display:flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  #content ul li .medal.position-1 {
+    color: gold;
+  }
+
+  #content ul li .medal.position-2 {
+    color: silver;
+  }
+
+  #content ul li .medal.position-3 {
+    color: orangered;
+  }
+
+  #content ul li .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content ul li .info > span {
+    margin-top: 8px;
+  }
+
+  #content ul li .info.first-column {
+    flex: 1;
+  }
+
+  #content ul li .info .address {
+    margin-right: 4px;
+  }
+
+  #content ul li .username {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+  }
+
+  #content ul li .info.second-column {
+    justify-self: flex-end;
+    text-align: center;
+    width: 50px;
+  }
+
+  #content ul li .info.third-column {
+    justify-self: flex-end;
+    text-align: right;
+    width: 50px;
+  }
+
+}
