@@ -11,9 +11,9 @@ function ServerFlag({ server }: { server: string }) {
         return <ReactCountryFlag countryCode="HK" svg />;
     } else if (server.startsWith('145.239')) {
         return <ReactCountryFlag countryCode="GB" svg />;
-    } else if (server.startsWith('176.9') || server.startsWith('213.239') || server.startsWith('78.46')) {
+    } else if (server.startsWith('176.9') || server.startsWith('213.239') || server.startsWith('78.46') || server.startsWith('46.4')) {
         return <ReactCountryFlag countryCode="DE" svg />;
-    } else if (server.startsWith('149.56') || server.startsWith('46.4')) {
+    } else if (server.startsWith('149.56')) {
         return <ReactCountryFlag countryCode="CA" svg />;
     } else if (server.startsWith('139.99')) {
         return <ReactCountryFlag countryCode="AU" svg />;
