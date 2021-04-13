@@ -20,7 +20,6 @@
   font-weight: 500;
   color: #121212;
   margin-left: 16px;
-  cursor: pointer;
 }
 
 #period .caret {
@@ -39,4 +38,8 @@
 
 #region .caret {
   margin-left: 4px;
+}
+
+.selected-period a {
+  color: #121212;
 }

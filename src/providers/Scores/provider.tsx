@@ -7,14 +7,14 @@ function ScoresProvider(props: PropsWithChildren<{}>) {
 
   const [scores, setScores] = useState<ScoreType[]>([]);
 
-  const currentDate = new Date();
-  currentDate.setUTCDate(1);
-  currentDate.setUTCHours(0);
-  currentDate.setUTCMinutes(0);
-  currentDate.setUTCSeconds(0);
-  currentDate.setUTCMilliseconds(0);
-
   useEffect(() => {
+    const currentDate = new Date();
+    currentDate.setUTCDate(1);
+    currentDate.setUTCHours(0);
+    currentDate.setUTCMinutes(0);
+    currentDate.setUTCSeconds(0);
+    currentDate.setUTCMilliseconds(0);
+
     fetch(
       `/top100-global-month-${currentDate.getUTCFullYear()}-${String(currentDate.getUTCMonth() + 1).padStart(
         2,
