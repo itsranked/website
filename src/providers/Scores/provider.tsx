@@ -16,7 +16,10 @@ function ScoresProvider(props: PropsWithChildren<{}>) {
 
   useEffect(() => {
     fetch(
-      `/top100-global-month-${currentDate.getUTCFullYear()}-${String(currentDate.getUTCMonth() + 1).padStart(2, '0')}`,
+      `/top100-global-month-${currentDate.getUTCFullYear()}-${String(currentDate.getUTCMonth() + 1).padStart(
+        2,
+        '0',
+      )}.json?${Math.random()}`,
     )
       .then((response) => response.json())
       .then((json) => setScores(json));
