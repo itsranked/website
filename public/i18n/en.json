@@ -17,7 +17,7 @@
   ],
   "content.info.score": "Score",
   "content.info.day-format": "MMM Do",
-  "content.info.time-format": "hh:mm",
+  "content.info.time-format": "HH:mm",
   "statusbar.links.about-us": "About",
   "statusbar.links.contact-us": "Contact",
   "statusbar.last-sync-time.last-sync": "Last sync",
