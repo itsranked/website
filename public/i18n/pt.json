@@ -23,5 +23,7 @@
   "statusbar.last-sync-time.last-sync": "Última atualização",
   "statusbar.last-sync-time.ago": "atrás",
   "loading": "Carregando",
-  "header.provider.language": "Idioma"
+  "header.provider.language": "Idioma",
+  "header.region.label": "Região",
+  "header.region.global": "Global"
 }

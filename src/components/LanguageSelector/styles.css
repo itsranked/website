@@ -37,6 +37,7 @@
   width: 120px;
   top: 24px;
   left: -29px;
+  z-index: 2;
 }
 
 #language .popover li {
