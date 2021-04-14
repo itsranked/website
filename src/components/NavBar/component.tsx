@@ -82,7 +82,7 @@ function NavBar(props: RouteComponentProps<NavBarPropsType>) {
               {regions.map((region) => {
                 return (
                   <li key={region.shortName}>
-                    <a href={`/${selectedLanguage}/${region.shortName}`}>
+                    <a href={`/${selectedLanguage}/${region.shortName}/${selectedFilter}`}>
                       <span className="language-name">{_(region.name)} </span>
                     </a>
                   </li>
