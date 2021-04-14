@@ -43,8 +43,16 @@
     margin-top: 1px;
     color: #d3d3d3;
     font-family: 'Roboto';
-    font-size: 13px;
+    font-size: 16px;
     padding: 16px;
+  }
+
+  #content ul li:nth-child(even):hover {
+    background-color: #303030;
+  }
+
+  #content ul li:nth-child(odd):hover {
+    background-color: #303030;
   }
 
   #content ul li:nth-child(even) {
@@ -101,38 +109,13 @@
   #content ul li .info.second-column {
     justify-self: flex-end;
     text-align: center;
-    width: 50px;
+    width: 100px;
   }
 
   #content ul li .info.third-column {
     justify-self: flex-end;
     text-align: right;
-    width: 50px;
-  }
-
-  .ad {
-    width: 352px;
-  }
-
-  .ad > div {
-    width: 160px;
-    float: left;
-  }
-
-  .ad.left-side > div {
-    margin-right: 16px;
-  }
-
-  .ad.right-side > div {
-    margin-left: 16px;
-  }
-
-  .ad .banner {
-    margin: auto;
-    background-color: #d3d3d3;
-    width: 160px;
-    height: 600px;
-    margin-top: 20px;
+    width: 100px;
   }
 
 }

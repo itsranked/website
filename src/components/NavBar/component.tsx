@@ -9,22 +9,31 @@ import './styles.css';
 type NavBarPropsType = {
   region: string;
   language: string;
+  filter: string;
 };
 
 function NavBar(props: RouteComponentProps<NavBarPropsType>) {
+  const { filter, region, language } = props.match.params;
   const { _ } = useInternationalization();
 
   /*const monthNames = _('months');
     const date = new Date();*/
 
-  const availableLanguages = ['en', 'pt'];
-  const selectedLanguage = availableLanguages.includes(props.match.params.language)
-    ? props.match.params.language
-    : (navigator.language || (navigator as any).userLanguage).split('-')[0];
+  const availableFilters = ['monthly', 'weekly', 'daily', 'hourly'];
+  const availableRegions = ['ALL', 'SA', 'UK', 'DE', 'NA', 'ASIA'];
 
-  const selectedRegion =
-    props.match.params.region &&
-    regions.find((region) => region.alias.toLowerCase() === props.match.params.region.toLowerCase());
+  const defaultFilter = 'monthly';
+  const defaultRegion = 'ALL';
+
+  const selectedFilter = filter && availableFilters.includes(filter) ? filter : defaultFilter;
+  const selectedRegionShortName = region && availableRegions.includes(region) ? region : defaultRegion;
+
+  const selectedRegion = regions.find((regionObject) => regionObject.shortName === selectedRegionShortName);
+
+  const availableLanguages = ['en', 'pt'];
+  const selectedLanguage = availableLanguages.includes(language)
+    ? language
+    : (navigator.language || (navigator as any).userLanguage).split('-')[0];
 
   const [showPopover, setShowPopover] = useState(false);
 
@@ -34,20 +43,35 @@ function NavBar(props: RouteComponentProps<NavBarPropsType>) {
 
   return (
     <nav id="navbar">
-      <div id="period">
-        <span
-          className="selected-period"
-          dangerouslySetInnerHTML={{ __html: _('navbar.period.selected-period.top100of') }}
+      <nav id="nav">
+        <a
+          className={`nav-item ${selectedFilter === 'monthly' ? 'nav-selected' : ''}`}
+          href={`/${selectedLanguage}/${selectedRegion?.shortName}/monthly`}
         >
-          {/*monthNames[date.getUTCMonth()]*/}
-        </span>
-        {/*<span className="caret">
-                    <FontAwesomeIcon icon={faCaretDown} />
-    </span>*/}
-      </div>
+          {_('nav.menu.monthly')}
+        </a>
+        <a
+          className={`nav-item ${selectedFilter === 'weekly' ? 'nav-selected' : ''}`}
+          href={`/${selectedLanguage}/${selectedRegion?.shortName}/weekly`}
+        >
+          {_('nav.menu.weekly')}
+        </a>
+        <a
+          className={`nav-item ${selectedFilter === 'daily' ? 'nav-selected' : ''}`}
+          href={`/${selectedLanguage}/${selectedRegion?.shortName}/daily`}
+        >
+          {_('nav.menu.daily')}
+        </a>
+        <a
+          className={`nav-item ${selectedFilter === 'hourly' ? 'nav-selected' : ''}`}
+          href={`/${selectedLanguage}/${selectedRegion?.shortName}/hourly`}
+        >
+          {_('nav.menu.hourly')}
+        </a>
+      </nav>
 
       <div id="region" onClick={handleOnClick}>
-        <span className="region">{selectedRegion ? selectedRegion.name : _('header.region.global')}</span>
+        <span className="region">{selectedRegion ? _(selectedRegion.name) : _('filters.global')}</span>
         <span className="caret">
           <FontAwesomeIcon icon={faCaretDown} />
         </span>
@@ -55,16 +79,11 @@ function NavBar(props: RouteComponentProps<NavBarPropsType>) {
         {showPopover && (
           <div className="popover box-shadow">
             <ul>
-              <li>
-                <a href={`/${selectedLanguage}`}>
-                  <span className="language-name">{_('header.region.global')} </span>
-                </a>
-              </li>
               {regions.map((region) => {
                 return (
-                  <li key={region.alias}>
-                    <a href={`/${selectedLanguage}/${region.alias}`}>
-                      <span className="language-name">{region.name} </span>
+                  <li key={region.shortName}>
+                    <a href={`/${selectedLanguage}/${region.shortName}`}>
+                      <span className="language-name">{_(region.name)} </span>
                     </a>
                   </li>
                 );

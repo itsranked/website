@@ -11,21 +11,6 @@ import useScores from 'src/hooks/useScores';
 import './desktop.css';
 import './index.css';
 
-const banners = [
-  'banner.webp',
-  'banner1.jpg',
-  'banner2.jpg',
-  'banner3.gif',
-  'banner4.png',
-  'banner5.gif',
-  'banner6.gif',
-  'banner7.jpg',
-];
-
-function getRandomBanner() {
-  return banners[Math.floor(Math.random() * banners.length)];
-}
-
 function HomePageDesktop() {
   const scores = useScores();
   const { _ } = useInternationalization();
@@ -36,23 +21,6 @@ function HomePageDesktop() {
       <NavBar />
 
       <div id="content">
-        <div className="ad left-side">
-          <div>
-            {[...new Array(12)].map((_, index) => (
-              <div key={index} className="banner">
-                <img src={`/${getRandomBanner()}`} alt="" />
-              </div>
-            ))}
-          </div>
-
-          <div>
-            {[...new Array(12)].map((_, index) => (
-              <div key={index} className="banner">
-                <img src={`/${getRandomBanner()}`} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
         <ul>
           {scores.map((score) => (
             <li key={score.position}>
@@ -85,24 +53,6 @@ function HomePageDesktop() {
             </li>
           ))}
         </ul>
-
-        <div className="ad right-side">
-          <div>
-            {[...new Array(12)].map((_, index) => (
-              <div key={index} className="banner">
-                <img src={`/${getRandomBanner()}`} alt="" />
-              </div>
-            ))}
-          </div>
-
-          <div>
-            {[...new Array(12)].map((_, index) => (
-              <div key={index} className="banner">
-                <img src={`/${getRandomBanner()}`} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <StatusBar />

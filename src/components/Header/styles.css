@@ -4,12 +4,29 @@
   }
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  #logo {
+    margin-left: 16px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 412px) {
+  #description {
+    display: none;
+  }
+
+  #logo {
+    flex: 1;
+  }
+}
+
 #header-container {
-    margin: auto;
-    flex-direction: row;
-    align-items: center;
-    display: flex;
-    height: 56px;
+  margin: auto;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  height: 56px;
 }
 
 #logo {
@@ -20,20 +37,22 @@
 }
 
 #header {
-    background-color: #121212;
+  background-color: #121212;
 }
 
-#provider {
-    font-family: 'Roboto';
-    font-weight: 500;
-    color: #d3d3d3;
-    margin-left: 16px;
-    flex: 1;
-    text-align: right;
-    margin-right: 16px;
-    margin-top:5px;
+#description {
+  flex: 1;
+  text-align: center;
 }
 
-#provider .caret {
-    margin-left: 4px;
+#description, #description a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Roboto';
+  color: #d3d3d3;
 }
+
+#description a {
+  border-bottom: 1px solid #d3d3d3;
+}
+

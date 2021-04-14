@@ -4,38 +4,30 @@ import { ScoreType } from './types';
 
 type ScoresProviderPropsType = {
   region?: string;
+  filter?: string;
 };
 
 function ScoresProvider(props: PropsWithChildren<ScoresProviderPropsType>) {
-  const { children, region } = props;
+  const { children, region, filter } = props;
 
   const [scores, setScores] = useState<ScoreType[]>([]);
 
   useEffect(() => {
-    const currentDate = new Date();
-    currentDate.setUTCDate(1);
-    currentDate.setUTCHours(0);
-    currentDate.setUTCMinutes(0);
-    currentDate.setUTCSeconds(0);
-    currentDate.setUTCMilliseconds(0);
+    const availableFilters = ['monthly', 'weekly', 'daily', 'hourly'];
+    const availableRegions = ['ALL', 'SA', 'UK', 'DE', 'NA', 'ASIA'];
 
-    const availableRegions = ['SA', 'UK', 'DE', 'NA', 'ASIA'];
+    const defaultFilter = 'monthly';
+    const defaultRegion = 'ALL';
 
-    const url =
-      !region || !availableRegions.includes(region)
-        ? `/top100-global-month-${currentDate.getUTCFullYear()}-${String(currentDate.getUTCMonth() + 1).padStart(
-            2,
-            '0',
-          )}.json?${Math.random()}`
-        : `/top100-global-month-${currentDate.getUTCFullYear()}-${String(currentDate.getUTCMonth() + 1).padStart(
-            2,
-            '0',
-          )}-${region}.json?${Math.random()}`;
+    const selectedFilter = filter && availableFilters.includes(filter) ? filter : defaultFilter;
+    const selectedRegion = region && availableRegions.includes(region) ? region : defaultRegion;
+
+    const url = `/top100-${selectedFilter}-${selectedRegion}.json?${Math.random()}`;
 
     fetch(url)
       .then((response) => response.json())
       .then((json) => setScores(json));
-  }, [region]);
+  }, [filter, region]);
 
   return <ScoresContext.Provider value={scores}>{children}</ScoresContext.Provider>;
 }

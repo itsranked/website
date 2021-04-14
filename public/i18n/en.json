@@ -1,5 +1,5 @@
 {
-  "navbar.period.selected-period.top100of": "Highest scores achieved on this month @ <a target='_blank' href='http://slither.io'>slither.io</a>",
+  "navbar.period.selected-period.top100of": "Highest scores @ <a target='_blank' href='http://slither.io'>slither.io</a>",
   "navbar.period.region.img.alt.global-region": "Global Region",
   "months": [
     "January",
@@ -25,5 +25,14 @@
   "loading": "Loading",
   "header.provider.language": "Language",
   "header.region.label": "Region",
-  "header.region.global": "Global"
+  "filters.global": "Global",
+  "filters.south_america": "South America",
+  "filters.united_kingdom": "United Kingdom",
+  "filters.germany": "Germany",
+  "filters.north_america": "North America",
+  "filters.asia": "Asia",
+  "nav.menu.monthly": "Monthly",
+  "nav.menu.weekly": "Weekly",
+  "nav.menu.daily": "Daily",
+  "nav.menu.hourly": "Hourly"
 }

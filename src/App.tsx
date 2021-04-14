@@ -8,10 +8,10 @@ function App() {
         <Router>
             <Switch>
                 <Route
-                    path="/:language?/:region?"
+                    path="/:language?/:region?/:filter?"
                     render={({ match }) => (
                         <InternationalizationProvider language={match.params.language}>
-                            <ScoresProvider region={match.params.region} >
+                            <ScoresProvider region={match.params.region} filter={match.params.filter} >
                                 <Home />
                             </ScoresProvider>
                         </InternationalizationProvider>

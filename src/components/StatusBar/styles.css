@@ -26,22 +26,8 @@
     font-size: 14px;
 }
 
-#about-us {
-    cursor: pointer;
-    margin-right: 4px;
-    display: none;
-}
-
-#links .separator {
-    margin-right: 4px;
-    display: none;
-}
-
-#contact-us {
-    margin-right: 16px;
-}
-
-#contact-us a {
-    color: #d3d3d3;
-    text-decoration: none;
+#twitter {
+  text-decoration: none;
+  color: #d3d3d3;
+  margin-right: 16px;
 }
