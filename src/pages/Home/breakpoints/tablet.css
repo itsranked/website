@@ -81,7 +81,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 160px;
+    width: 300px;
   }
 
   #content ul li .info.second-column {
