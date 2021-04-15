@@ -109,7 +109,7 @@
   }
 
   #topbanner {
-    display: none;
+    display: none !important;
 
     display: flex;
     flex-direction: column;
