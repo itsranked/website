@@ -96,6 +96,8 @@
   }
 
   #topbanner {
+    display: none;
+
     margin: auto;
     max-width: 1320px;
     display: flex;
