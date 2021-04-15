@@ -8,19 +8,25 @@ import ServerFlag from 'src/components/ServerFlag/component';
 import StatusBar from 'src/components/StatusBar/component';
 import useInternationalization from 'src/hooks/useInternationalization';
 import useScores from 'src/hooks/useScores';
+import useScript from 'src/hooks/useScript';
 import './index.css';
 import './tablet.css';
-
 
 function HomePageTablet() {
   const scores = useScores();
   const { _ } = useInternationalization();
+
+  const topBannerRef = useScript<HTMLDivElement>({
+    src: '//p429105.clksite.com/adServe/banners?tid=429105_841135_3',
+  });
 
   return (
     <div id="container">
       <Header />
       <NavBar />
       <StatusBar />
+
+      <div id="topbanner" ref={topBannerRef}></div>
 
       <div id="content">
         <ul>

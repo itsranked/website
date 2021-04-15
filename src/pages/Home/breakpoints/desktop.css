@@ -1,26 +1,4 @@
 @media (min-width: 1025px) {
-
-  /* width */
-  ::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(255,255,255,0.1);
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.2);
-    outline: 1px solid slategrey;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.3);
-  }
-
   #content {
     margin: auto;
     display: flex;
@@ -28,7 +6,6 @@
     height: calc(100vh - 32px - 56px - 32px);
     overflow-y: auto;
     max-width: 1320px;
-
   }
 
   #content ul {
@@ -65,7 +42,7 @@
 
   #content ul li .medal {
     font-size: 32px;
-    display:flex;
+    display: flex;
     align-items: center;
     margin-right: 8px;
   }
@@ -118,4 +95,13 @@
     width: 100px;
   }
 
+  #topbanner {
+    margin: auto;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+  }
 }
